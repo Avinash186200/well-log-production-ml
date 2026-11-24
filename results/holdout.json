@@ -1,0 +1,105 @@
+{
+ "wells": 140,
+ "pads": 25,
+ "zero_share": 0.0786,
+ "mean_bbl": 69838.8,
+ "top_decile_wells": 14,
+ "bootstrap": {
+  "n_boot": 1000,
+  "unit": "pad",
+  "seed": 0
+ },
+ "models": {
+  "type_curve": {
+   "spearman": 0.345,
+   "top_decile_capture": 0.4552,
+   "mae_bbl": 41508.1,
+   "bias_ratio": 0.8112,
+   "n": 140,
+   "se_spearman": 0.1018,
+   "se_top_decile_capture": 0.092,
+   "se_mae_bbl": 5567.1
+  },
+  "knn": {
+   "spearman": 0.3613,
+   "top_decile_capture": 0.3969,
+   "mae_bbl": 41692.2,
+   "bias_ratio": 0.8084,
+   "n": 140,
+   "se_spearman": 0.1145,
+   "se_top_decile_capture": 0.1007,
+   "se_mae_bbl": 5836.1
+  },
+  "tweedie": {
+   "spearman": 0.5867,
+   "top_decile_capture": 0.6661,
+   "mae_bbl": 34286.5,
+   "bias_ratio": 0.8932,
+   "n": 140,
+   "se_spearman": 0.0659,
+   "se_top_decile_capture": 0.0704,
+   "se_mae_bbl": 4663.6
+  },
+  "tweedie_random_cv_pick": {
+   "spearman": 0.5867,
+   "top_decile_capture": 0.6661,
+   "mae_bbl": 34286.5,
+   "bias_ratio": 0.8932,
+   "n": 140,
+   "se_spearman": 0.0659,
+   "se_top_decile_capture": 0.0704,
+   "se_mae_bbl": 4663.6
+  },
+  "log_target": {
+   "spearman": 0.5229,
+   "top_decile_capture": 0.6524,
+   "mae_bbl": 45299.5,
+   "bias_ratio": 0.6058,
+   "n": 140,
+   "se_spearman": 0.0794,
+   "se_top_decile_capture": 0.1124,
+   "se_mae_bbl": 6208.7
+  },
+  "tweedie_no_location": {
+   "spearman": 0.5951,
+   "top_decile_capture": 0.7498,
+   "mae_bbl": 33032.2,
+   "bias_ratio": 0.894,
+   "n": 140,
+   "se_spearman": 0.0607,
+   "se_top_decile_capture": 0.0723,
+   "se_mae_bbl": 4364.5
+  },
+  "oracle": {
+   "spearman": 0.7632,
+   "top_decile_capture": 0.9412,
+   "mae_bbl": 22379.9,
+   "bias_ratio": 0.9811,
+   "n": 140,
+   "se_spearman": 0.05,
+   "se_top_decile_capture": 0.0419,
+   "se_mae_bbl": 2600.0
+  }
+ },
+ "random_pick_capture_expected": 0.3374,
+ "tweedie_share_of_oracle_spearman": 0.7687,
+ "quantiles": {
+  "share_below_q10": 0.1,
+  "share_below_q50": 0.5214,
+  "share_below_q90": 0.8143,
+  "coverage_central": 0.7143,
+  "mean_width_bbl": 78129.0581
+ },
+ "mean_abs_shap_top10": {
+  "RHOB_mean": 0.1894,
+  "hcpv_m": 0.1377,
+  "lateral_m": 0.1029,
+  "x_km": 0.0783,
+  "RHOB_p10": 0.0742,
+  "proppant_kg_m": 0.0723,
+  "log10RT_mean": 0.06,
+  "zone_thickness_m": 0.051,
+  "tvd_m": 0.05,
+  "completion_year": 0.0429
+ }
+}

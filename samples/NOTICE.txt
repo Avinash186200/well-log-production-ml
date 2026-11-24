@@ -1,0 +1,14 @@
+force2020_wells.csv is derived from:
+
+Source: Bormann, Peter; Aursand, Peder; Dilib, Fahad; Manral, Surrender; Dischington, Peter (2020).
+  "FORCE 2020 Well well log and lithofacies dataset for machine learning competition" (v1).
+  Zenodo. https://doi.org/10.5281/zenodo.4351156
+Licence: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Underlying data: contains data under the Norwegian licence for Open Government data (NLOD) 2.0,
+  https://data.norge.no/nlod/en/2.0, distributed by the Norwegian government (the Zenodo record gives the licence as "NOLD 2.0" and does not name the agency).
+
+Changes made: each LAS file was parsed, curves were mapped to canonical names, values outside
+plausible ranges were counted, and every well was reduced to one row of summary statistics
+(coverage, units, spike counts, medians, location in km, lithology counts). No depth samples
+are included. Rebuild with `make force` (downloads the original zip and checks its MD5 and
+SHA-256).

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wellprod"
+version = "1.0.0"
+description = "Rank planned wells by expected first-12-month oil from well logs, completion design and location: a data-readiness audit, LAS parsing, petrophysical features, LightGBM Tweedie vs baselines, and random vs grouped vs spatial cross-validation."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24", "pandas>=2.0", "scipy>=1.10", "lightgbm>=4.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+wellprod = "wellprod.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

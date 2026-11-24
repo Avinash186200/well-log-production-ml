@@ -1,0 +1,107 @@
+{
+ "seed": 7,
+ "config": {
+  "n_fields": 9,
+  "pads_per_field": [
+   12,
+   18
+  ],
+  "wells_per_pad": [
+   3,
+   8
+  ],
+  "area_km": [
+   120.0,
+   80.0
+  ],
+  "min_field_gap_km": 24.0,
+  "field_radius_km": 9.0,
+  "length_scale_km": 7.0,
+  "first_year": 2014,
+  "last_year": 2024,
+  "holdout_from_year": 2022,
+  "step_m": 0.5,
+  "log_margin_m": 15.0
+ },
+ "wells": 718,
+ "pads": 137,
+ "fields": 9,
+ "dev": {
+  "wells": 578,
+  "pads": 112,
+  "fields": 9,
+  "completion_years": [
+   2014,
+   2021
+  ],
+  "median_lateral_m": 2002.8,
+  "median_proppant_kg_m": 1161.9
+ },
+ "holdout": {
+  "wells": 140,
+  "pads": 25,
+  "fields": 9,
+  "completion_years": [
+   2022,
+   2024
+  ],
+  "median_lateral_m": 2379.8,
+  "median_proppant_kg_m": 1558.0,
+  "nearest_dev_well_km_median": 2.738,
+  "new_pads_share": 1.0,
+  "share_above_dev_max": {
+   "lateral_m": 0.0143,
+   "proppant_kg_m": 0.0
+  }
+ },
+ "features": {
+  "n": 45,
+  "names": [
+   "zone_thickness_m",
+   "cov_GR",
+   "GR_p10",
+   "GR_p50",
+   "GR_p90",
+   "GR_mean",
+   "GR_std",
+   "cov_RHOB",
+   "RHOB_p10",
+   "RHOB_p50",
+   "RHOB_p90",
+   "RHOB_mean",
+   "RHOB_std",
+   "cov_NPHI",
+   "NPHI_p10",
+   "NPHI_p50",
+   "NPHI_p90",
+   "NPHI_mean",
+   "NPHI_std",
+   "cov_RT",
+   "log10RT_p10",
+   "log10RT_p50",
+   "log10RT_p90",
+   "log10RT_mean",
+   "log10RT_std",
+   "cov_DT",
+   "DT_p10",
+   "DT_p50",
+   "DT_p90",
+   "DT_mean",
+   "DT_std",
+   "vsh_mean",
+   "phi_mean",
+   "sw_mean",
+   "ntg",
+   "net_pay_m",
+   "hcpv_m",
+   "lateral_m",
+   "proppant_kg_m",
+   "fluid_m3_m",
+   "stage_spacing_m",
+   "completion_year",
+   "x_km",
+   "y_km",
+   "tvd_m"
+  ]
+ }
+}

@@ -1,0 +1,40 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -c constraints.txt -e ".[dev]"
+      - name: Run tests (offline; includes a full rerun checked against results/*.json)
+        run: pytest -q
+      - name: CLI runs end to end
+        run: |
+          python -m wellprod.cli simulate --seed 3 --out /tmp/basin
+          python -m wellprod.cli force-report --out /tmp
+          python -m wellprod.cli report --out results
+          git diff --exit-code results/RESULTS.md
+
+  secrets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

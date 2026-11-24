@@ -1,0 +1,206 @@
+{
+ "source": {
+  "zenodo_record": 4351156,
+  "doi": "10.5281/zenodo.4351156",
+  "licence": "CC BY 4.0 (underlying government data: NLOD 2.0)",
+  "zip_bytes": 169785172,
+  "md5": "da0d72d5783a780ac71779453d9fbfbf",
+  "sha256": "042ef1d473100dc12768cae7107a8cead071a394f137af3bc1ddaf8a5d1b8dda"
+ },
+ "wells": 118,
+ "depth_step_m": {
+  "0.152": 118
+ },
+ "gr_interval_m": {
+  "min": 875.5,
+  "median": 2925.5,
+  "max": 5110.7
+ },
+ "logs": {
+  "wells": 118,
+  "min_coverage": 0.8,
+  "curves": {
+   "GR": {
+    "wells_with_curve": 118,
+    "wells_covering_zone": 118,
+    "share_covering_zone": 1.0,
+    "wells_partial": 0,
+    "aliases": {
+     "GR": 118
+    },
+    "units": {
+     "gAPI": 118
+    },
+    "conversions": {},
+    "declared_unit_wrong": 0,
+    "wells_with_spikes": 15,
+    "spike_samples": 2374
+   },
+   "RHOB": {
+    "wells_with_curve": 118,
+    "wells_covering_zone": 34,
+    "share_covering_zone": 0.2881,
+    "wells_partial": 84,
+    "aliases": {
+     "RHOB": 118
+    },
+    "units": {
+     "g/cm3": 118
+    },
+    "conversions": {},
+    "declared_unit_wrong": 0,
+    "wells_with_spikes": 71,
+    "spike_samples": 33666
+   },
+   "NPHI": {
+    "wells_with_curve": 118,
+    "wells_covering_zone": 14,
+    "share_covering_zone": 0.1186,
+    "wells_partial": 104,
+    "aliases": {
+     "NPHI": 118
+    },
+    "units": {
+     "m3/m3": 118
+    },
+    "conversions": {},
+    "declared_unit_wrong": 0,
+    "wells_with_spikes": 22,
+    "spike_samples": 3073
+   },
+   "RT": {
+    "wells_with_curve": 118,
+    "wells_covering_zone": 111,
+    "share_covering_zone": 0.9407,
+    "wells_partial": 7,
+    "aliases": {
+     "RDEP": 118
+    },
+    "units": {
+     "ohm.m": 118
+    },
+    "conversions": {},
+    "declared_unit_wrong": 0,
+    "wells_with_spikes": 6,
+    "spike_samples": 93
+   },
+   "DT": {
+    "wells_with_curve": 118,
+    "wells_covering_zone": 69,
+    "share_covering_zone": 0.5847,
+    "wells_partial": 49,
+    "aliases": {
+     "DTC": 118
+    },
+    "units": {
+     "us/ft": 118
+    },
+    "conversions": {},
+    "declared_unit_wrong": 0,
+    "wells_with_spikes": 27,
+    "spike_samples": 11819
+   }
+  },
+  "survival": [
+   {
+    "requires": "GR",
+    "wells": 118
+   },
+   {
+    "requires": "GR+RHOB",
+    "wells": 34
+   },
+   {
+    "requires": "GR+RHOB+RT",
+    "wells": 34
+   },
+   {
+    "requires": "GR+RHOB+RT+NPHI",
+    "wells": 13
+   },
+   {
+    "requires": "GR+RHOB+RT+NPHI+DT",
+    "wells": 12
+   }
+  ],
+  "unknown_curves": {
+   "BS": 83,
+   "DCAL": 28,
+   "DEPTH_MD": 118,
+   "DRHO": 114,
+   "DTS": 46,
+   "FORCE_2020_LITHOFACIES_CONFIDENCE": 118,
+   "FORCE_2020_LITHOFACIES_LITHOLOGY": 118,
+   "MUDWEIGHT": 29,
+   "PEF": 88,
+   "RMED": 117,
+   "RMIC": 34,
+   "ROP": 67,
+   "ROPA": 38,
+   "RSHA": 82,
+   "RXO": 43,
+   "SP": 76,
+   "X_LOC": 118,
+   "Y_LOC": 118,
+   "Z_LOC": 118
+  }
+ },
+ "survival_at_min_coverage_0_5": [
+  {
+   "requires": "GR",
+   "wells": 118
+  },
+  {
+   "requires": "GR+RHOB",
+   "wells": 82
+  },
+  {
+   "requires": "GR+RHOB+RT",
+   "wells": 82
+  },
+  {
+   "requires": "GR+RHOB+RT+NPHI",
+   "wells": 53
+  },
+  {
+   "requires": "GR+RHOB+RT+NPHI+DT",
+   "wells": 51
+  }
+ ],
+ "declared_but_empty_curves": {
+  "CALI": 1
+ },
+ "spatial": {
+  "wells_with_location": 118,
+  "nearest_neighbour_km": {
+   "min": 0.064,
+   "median": 7.73,
+   "q90": 18.7
+  },
+  "wells_with_neighbour_within_2km": 4
+ },
+ "gr_sand_flag_vs_lithology": {
+  "wells": 118,
+  "samples": 1429611,
+  "sandstone_samples": 207012,
+  "clean_gr_samples": 514083,
+  "recall_sandstone": 0.7389,
+  "precision_sandstone": 0.2975,
+  "spearman_well_sand_fraction": 0.1005,
+  "clean_gr_samples_by_lithology": {
+   "shale": 167737,
+   "sandstone": 152962,
+   "sandstone/shale": 71653,
+   "limestone": 56787,
+   "marl": 21505,
+   "halite": 14674,
+   "chalk": 13714,
+   "tuff": 9769,
+   "coal": 2087,
+   "anhydrite": 1623,
+   "dolomite": 1505,
+   "basement": 67
+  },
+  "rule": "clean if GR index < 0.4, GR endpoints = per-well P05/P95"
+ }
+}
